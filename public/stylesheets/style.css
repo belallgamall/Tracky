@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'TT Firs Neue Trial Var Roman', sans-serif;
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #1a1a1a;
+  padding: 30px 40px;
+  border-radius: 16px;
+  width: 380px;
+  box-shadow: 0px 0px 25px 0px rgb(101 46 46 / 20%);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ff3b3b;
+  letter-spacing: 1.8px;
+}
+
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #ccc;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"] {
+  background: #262626;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #f2f2f2;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #ff3b3b;
+  outline: none;
+  background: #1f1f1f;
+}
+
+.switch-field {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #029f00;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ff3b3b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a31414;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e63636;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
+}
